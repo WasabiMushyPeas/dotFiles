@@ -1,0 +1,122 @@
+time 1655041851
+new [description:"get virtal box to work on garuda linux" entry:"1655041851" modified:"1655041851" status:"pending" tags:"Linux" tags_Linux:"x" uuid:"30677fdd-0a9a-4a67-ae8d-882e8c8b454b"]
+---
+time 1655041909
+new [description:"once virtual box is working finish the hack the box lesson" entry:"1655041909" modified:"1655041909" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"91ed0e27-0e81-44e0-ab39-89ae171ead52"]
+---
+time 1655041937
+new [description:"look at the jupiter networking course" entry:"1655041937" modified:"1655041937" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"71dc3f17-c4fe-4194-9adf-7c8b9c7554ea"]
+---
+time 1655042296
+old [description:"look at the jupiter networking course" entry:"1655041937" modified:"1655041937" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"71dc3f17-c4fe-4194-9adf-7c8b9c7554ea"]
+new [description:"look at the jupiter networking course" entry:"1655041937" modified:"1655042296" priority:"M" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"71dc3f17-c4fe-4194-9adf-7c8b9c7554ea"]
+---
+time 1655043418
+new [description:"set everything to dracula theme" entry:"1655043418" modified:"1655043418" priority:"H" status:"pending" tags:"Rice" tags_Rice:"x" uuid:"cc7770ee-f60a-4fd1-a473-af24017e6c60"]
+---
+time 1656431198
+new [description:"driving" due:"1658901600" entry:"1656431198" modified:"1656431198" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+---
+time 1656431258
+old [description:"driving" due:"1658901600" entry:"1656431198" modified:"1656431198" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+new [description:"prority:H" due:"1658901600" entry:"1656431198" modified:"1656431258" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+---
+time 1656431289
+old [description:"prority:H" due:"1658901600" entry:"1656431198" modified:"1656431258" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+new [description:"driving" due:"1658901600" entry:"1656431198" modified:"1656431289" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+---
+time 1656431962
+new [description:"5" entry:"1656431962" modified:"1656431962" priority:"H" status:"pending" uuid:"3ec18192-5e07-4125-b428-ca5c31db7698"]
+---
+time 1656431985
+old [description:"5" entry:"1656431962" modified:"1656431962" priority:"H" status:"pending" uuid:"3ec18192-5e07-4125-b428-ca5c31db7698"]
+new [description:"5" end:"1656431978" entry:"1656431962" modified:"1656431985" priority:"H" status:"deleted" uuid:"3ec18192-5e07-4125-b428-ca5c31db7698"]
+---
+time 1656432070
+old [description:"driving" due:"1658901600" entry:"1656431198" modified:"1656431289" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+new [description:"driving" due:"1658901600" entry:"1656431198" modified:"1656432070" priority:"H" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+---
+time 1656432091
+old [description:"set everything to dracula theme" entry:"1655043418" modified:"1655043418" priority:"H" status:"pending" tags:"Rice" tags_Rice:"x" uuid:"cc7770ee-f60a-4fd1-a473-af24017e6c60"]
+new [description:"set everything to dracula theme" entry:"1655043418" modified:"1656432091" priority:"L" status:"pending" tags:"Rice" tags_Rice:"x" uuid:"cc7770ee-f60a-4fd1-a473-af24017e6c60"]
+---
+time 1656432149
+old [description:"get virtal box to work on garuda linux" entry:"1655041851" modified:"1655041851" status:"pending" tags:"Linux" tags_Linux:"x" uuid:"30677fdd-0a9a-4a67-ae8d-882e8c8b454b"]
+new [description:"get virtal box to work on garuda linux" entry:"1655041851" modified:"1656432149" priority:"L" status:"pending" tags:"Linux" tags_Linux:"x" uuid:"30677fdd-0a9a-4a67-ae8d-882e8c8b454b"]
+---
+time 1656432157
+old [description:"once virtual box is working finish the hack the box lesson" entry:"1655041909" modified:"1655041909" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"91ed0e27-0e81-44e0-ab39-89ae171ead52"]
+new [description:"once virtual box is working finish the hack the box lesson" entry:"1655041909" modified:"1656432157" priority:"L" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"91ed0e27-0e81-44e0-ab39-89ae171ead52"]
+---
+time 1656432203
+old [description:"look at the jupiter networking course" entry:"1655041937" modified:"1655042296" priority:"M" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"71dc3f17-c4fe-4194-9adf-7c8b9c7554ea"]
+new [description:"look at the jupiter networking course" due:"1658901600" entry:"1655041937" modified:"1656432203" priority:"M" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"71dc3f17-c4fe-4194-9adf-7c8b9c7554ea"]
+---
+time 1656432343
+new [description:"have the featured summary in the terminal" entry:"1656432343" modified:"1656432343" priority:"L" status:"pending" tags:"Program" tags_Program:"x" uuid:"93436c0e-4d9e-4e11-99d7-ff7e38b3042f"]
+---
+time 1656432379
+new [description:"have the webscrapper node js site working on digital ocean" entry:"1656432379" modified:"1656432379" priority:"L" status:"pending" tags:"Program" tags_Program:"x" uuid:"07d99734-3d1c-43e4-8f84-c79176c198fc"]
+---
+time 1656432475
+old [description:"get virtal box to work on garuda linux" entry:"1655041851" modified:"1656432149" priority:"L" status:"pending" tags:"Linux" tags_Linux:"x" uuid:"30677fdd-0a9a-4a67-ae8d-882e8c8b454b"]
+new [description:"get virtal box to work on garuda linux" entry:"1655041851" modified:"1656432475" priority:"L" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"30677fdd-0a9a-4a67-ae8d-882e8c8b454b"]
+---
+time 1656432562
+old [description:"driving" due:"1658901600" entry:"1656431198" modified:"1656432070" priority:"H" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+new [description:"driving" due:"1658901600" entry:"1656431198" modified:"1656432562" priority:"H" project:"Summer-Work" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"2ddd9aea-7837-4eb9-8556-ab7f7ea6c4fc"]
+---
+time 1656432572
+old [description:"look at the jupiter networking course" due:"1658901600" entry:"1655041937" modified:"1656432203" priority:"M" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"71dc3f17-c4fe-4194-9adf-7c8b9c7554ea"]
+new [description:"look at the jupiter networking course" due:"1658901600" entry:"1655041937" modified:"1656432572" priority:"M" project:"Summer-Work" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"71dc3f17-c4fe-4194-9adf-7c8b9c7554ea"]
+---
+time 1656432613
+old [description:"get virtal box to work on garuda linux" entry:"1655041851" modified:"1656432475" priority:"L" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"30677fdd-0a9a-4a67-ae8d-882e8c8b454b"]
+new [description:"get virtal box to work on garuda linux" entry:"1655041851" modified:"1656432613" priority:"L" project:"Linux" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"30677fdd-0a9a-4a67-ae8d-882e8c8b454b"]
+---
+time 1656432619
+old [description:"once virtual box is working finish the hack the box lesson" entry:"1655041909" modified:"1656432157" priority:"L" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"91ed0e27-0e81-44e0-ab39-89ae171ead52"]
+new [description:"once virtual box is working finish the hack the box lesson" entry:"1655041909" modified:"1656432619" priority:"L" project:"Linux" status:"pending" tags:"Learn" tags_Learn:"x" uuid:"91ed0e27-0e81-44e0-ab39-89ae171ead52"]
+---
+time 1656432624
+old [description:"set everything to dracula theme" entry:"1655043418" modified:"1656432091" priority:"L" status:"pending" tags:"Rice" tags_Rice:"x" uuid:"cc7770ee-f60a-4fd1-a473-af24017e6c60"]
+new [description:"set everything to dracula theme" entry:"1655043418" modified:"1656432624" priority:"L" project:"Linux" status:"pending" tags:"Rice" tags_Rice:"x" uuid:"cc7770ee-f60a-4fd1-a473-af24017e6c60"]
+---
+time 1656432629
+old [description:"have the featured summary in the terminal" entry:"1656432343" modified:"1656432343" priority:"L" status:"pending" tags:"Program" tags_Program:"x" uuid:"93436c0e-4d9e-4e11-99d7-ff7e38b3042f"]
+new [description:"have the featured summary in the terminal" entry:"1656432343" modified:"1656432629" priority:"L" project:"Linux" status:"pending" tags:"Program" tags_Program:"x" uuid:"93436c0e-4d9e-4e11-99d7-ff7e38b3042f"]
+---
+time 1656432633
+old [description:"have the webscrapper node js site working on digital ocean" entry:"1656432379" modified:"1656432379" priority:"L" status:"pending" tags:"Program" tags_Program:"x" uuid:"07d99734-3d1c-43e4-8f84-c79176c198fc"]
+new [description:"have the webscrapper node js site working on digital ocean" entry:"1656432379" modified:"1656432633" priority:"L" project:"Linux" status:"pending" tags:"Program" tags_Program:"x" uuid:"07d99734-3d1c-43e4-8f84-c79176c198fc"]
+---
+time 1656432755
+new [description:"make home dir git repo and push it to git hub" entry:"1656432755" modified:"1656432755" priority:"L" project:"Linux" status:"pending" tags:"Program" tags_Program:"x" uuid:"84510c59-c03a-402d-b260-3bba1367a26a"]
+---
+time 1656442871
+new [description:"make sure fish is dracula themed" entry:"1656442871" modified:"1656442871" priority:"L" project:"Linux" status:"pending" tags:"Rice" tags_Rice:"x" uuid:"880b5548-9753-4c0a-871a-62f5ca2248ac"]
+---
+time 1656443007
+old [description:"make home dir git repo and push it to git hub" entry:"1656432755" modified:"1656432755" priority:"L" project:"Linux" status:"pending" tags:"Program" tags_Program:"x" uuid:"84510c59-c03a-402d-b260-3bba1367a26a"]
+new [description:"make home dir git repo and push it to git hub" end:"1656443007" entry:"1656432755" modified:"1656443007" priority:"L" project:"Linux" status:"completed" tags:"Program" tags_Program:"x" uuid:"84510c59-c03a-402d-b260-3bba1367a26a"]
+---
+time 1656443100
+new [description:"write a python program that moves all the wanted folders to to \/usr\/share\/BackOfJack and push it" entry:"1656443100" modified:"1656443100" priority:"L" project:"Linux" status:"pending" tags:"Program" tags_Program:"x" uuid:"289df181-7827-4bac-a705-009598301e1e"]
+---
+time 1656443323
+new [description:"find out rocket for dad to buy" entry:"1656443323" modified:"1656443323" project:"RandoProjects" status:"pending" tags:"Fun" tags_Fun:"x" uuid:"a4eb6c18-2047-428d-a90f-dcaed59492da"]
+---
+time 1656443969
+old [description:"find out rocket for dad to buy" entry:"1656443323" modified:"1656443323" project:"RandoProjects" status:"pending" tags:"Fun" tags_Fun:"x" uuid:"a4eb6c18-2047-428d-a90f-dcaed59492da"]
+new [description:"find out rocket for dad to buy" due:"1656655200" entry:"1656443323" modified:"1656443969" priority:"M" project:"RandoProjects" status:"pending" tags:"Fun" tags_Fun:"x" uuid:"a4eb6c18-2047-428d-a90f-dcaed59492da"]
+---
+time 1656444146
+new [description:"order key switches and key caps" due:"1656655200" entry:"1656444146" modified:"1656444146" priority:"L" project:"RandoProjects" status:"pending" tags:"KeyBoard" tags_KeyBoard:"x" uuid:"2444f8f9-6d78-428c-8d24-a6e581378779"]
+---
+time 1656444194
+new [description:"write program for key board" entry:"1656444194" modified:"1656444194" priority:"L" project:"RandoProjects" status:"pending" tags:"KeyBoard" tags_KeyBoard:"x" uuid:"37ad8bdc-0f6d-4b94-b5ee-6651da8ad7c5"]
+---
+time 1656517460
+old [description:"make sure fish is dracula themed" entry:"1656442871" modified:"1656442871" priority:"L" project:"Linux" status:"pending" tags:"Rice" tags_Rice:"x" uuid:"880b5548-9753-4c0a-871a-62f5ca2248ac"]
+new [description:"make sure fish is dracula themed" end:"1656517460" entry:"1656442871" modified:"1656517460" priority:"L" project:"Linux" status:"completed" tags:"Rice" tags_Rice:"x" uuid:"880b5548-9753-4c0a-871a-62f5ca2248ac"]
+---

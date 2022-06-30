@@ -1,0 +1,67 @@
+                                    Start
+  - Make sure that I have the "State Driver Handbook"
+  - Study the "New Mexico Driver Handbook"
+  - Also study Level 1 Witten test
+                                    Studying
+                                  --Level 1--
+#   Are you Ready?
+  - HTS (Highway Transportation System) made up a three parts People, Vehicles, and Roadways
+  - HTS is manged by the federal (which lay the base rules) and the local governments
+  - Roads North and south have odd numbers; even numbers are East and West (the higher the number the further east it is)
+  - GDL (Graduated Driver Licensing) is an extended period of surpervised driving to give more experince to new drivers
+  - Parents need preventing kids from driving at night
+  - don't drive alone in the first 6 months that you get your license
+
+#   Adolescent Physiology and Driving
+  - Three skills you need to drive are Control of the Vehicle, Maneuvering the Vehicle, and Planning
+  - Part of the reason way teen driving is dangorous is because the prefrontal cortex (the part of the brain that handles judgment) is less developed
+  - Also in teen years teenagers have less myelination coating around their nerves making sutiation assment harder and slower
+  - On top of this as the brain is developing it goes through a proces called pruning (which is where the brain gets rid of all unneaded nerves) 
+during pruning the person does not have the brain power to multitask and make good decisions
+  - This leads to safty sometimes being trumped by thrill seeking (especaily with friends)
+  - The GDL is one of the first attempts to take teens natuarl limititions into account to make driving more safe
+  - The extra time GDL provides allows teens to establish good driving habits help their brain develop leading to safe automatic reactions
+  - Driving is a privilege and can been earned by mature behavour blah blah blah (The Driving Philosophy)
+  - Most states allow parents to legal put restrictions on teen driving
+  - The threat of lossing driving prevelages causes teens to be more resposable
+
+#   The Mechanics of Driving
+  - The steering system is the interface that allows the driver to change the angle of the front wheels 
+(usally powered steering, a hydraulic pump powered by a belt connected to the engine)
+  - The steering wheel is connected to the steering column which turns the rotorary motion into linear motion on the steering linkage (powerd steering makes it easer to turn)
+  - To maintain the steering system don't steer when your not moving, don't force the wheel to it's limit, avoide impacts as they can knock the steering out of line, 
+when checking oil check the power steering system
+  - The Suspension helps smooth out the car ride and keeps the wheels pointed in the right direction.
+  - Suspension does not usally fail immediately a sign of failure is cupping (uneven tier wear)
+  - The tiers take most of the shock (more to suspension usally)
+  - The tiers allow the car to exert force on the ground
+  - There are two types of tier construtions bias ply (the layers of cord and rubber are criss-crossed) making it more impact resistance; And Radial ply 
+(where the ply's are parallel but perpendicular to the tread) making a more flexable and long lasting but on impact can cause belt separation lead to a blowout
+  - Radial tiers should be at 35 psi where bias tiers should be at 32 psi
+  - Always check the treads and psi
+  - Tiers are rated by the Uniform Tire Quality Grading System which is a scale of ABC A being the best C being the meeting minimum requirment
+  - The breaking system slows down the tier via friction
+  - Break Components:
+  Disc Braeak - Break by pinching a metal disc with special break pads (they a usually on the front wheels which do 70% of the braking)
+  Drum Brakes - An enclosed system where break shoe pushes on a drum
+  Dual Master Cylinder - Two cylinders that are independent of one another the pressurize the break fluid
+  Brake Lines - steel tubes that carry brake fluid under pressure
+  Power Brake - Just like powered steering makes it easier for the driver to break (It is also designed when the engine fails the breaks can work one last time)
+  Parking Brake (Emergency Break) - Uses cables and levers to break the rear breaks (independent from the hydraulic breaks) should be engaged when parking
+  - The fuel system is designed to provid the right amount of fuel and air to the engine
+  - Fuel System Components:
+  Fuel Tank - duh (also has the fuel gauge though)
+  Fuel Lines - tubes the connect to the carburetor/injection system
+  Carburetor/Fuel Injection - throttled by the peddle it controls the fuel and air mixture that enters the engine (Fuel Injection it more common)
+  Fuel Filter - Removes contaminants form the fuel
+  Fuel Pump - Pumps fuel through the fuel lines
+  Air Filter - Cleans contaminants from the air
+  Choke - Decreases air flow to the pistons intern increasing idle speed (used when cold)
+  Turbo - Increases the air flow to the pistons
+  Ignition System - Take (alot) of power from the car battery and shorts in making a spark igniting the fuel in the engine
+  Charging System - Feeds of the enige providing power while the car is runing
+  Starting System - The HID that allows the driver to start the engine
+  Accessory Circuits - Lights, safty systems, etc. Hooked up to a fuse and any system the need electricity
+#   Your State and Your Permission to Drive
+  - The process of getting a drivers license is manged by the New Mexico Graduated Licensing Law
+Stopped at pg 26

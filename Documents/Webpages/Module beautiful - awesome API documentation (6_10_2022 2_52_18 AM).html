@@ -1,0 +1,813 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html style><!--
+ Page saved with SingleFile 
+ url: https://awesomewm.org/doc/api/libraries/beautiful.html#useless_gap 
+ saved date: Fri Jun 10 2022 02:52:18 GMT-0600 (Mountain Daylight Time)
+--><meta charset=utf-8>
+<title>Module beautiful - awesome API documentation</title>
+<style>body{color:#47555c;font-size:16px;font-family:sans-serif;margin:0;background:#eff4ff}a:link{color:#008fee}a:visited{color:#008fee}a:hover{color:#22a7ff}h1{font-size:26px;font-weight:normal}h2{font-size:22px;font-weight:normal}h3{font-size:18px;font-weight:normal}span.parameter{font-family:monospace;font-weight:bold;color:rgb(99,115,131)}span.parameter:after{content:":"}span.types:before{content:"("}span.types:after{content:")"}.type{font-weight:bold;font-style:italic}p code{background-color:#eaedf587;padding-left:3px;padding-right:3px;border-radius:3px;border-style:solid;border-width:1px;border-color:#b7bac1;font-family:monospace;margin-left:5px;margin-right:5px}#navigation{float:left;background-color:white;border-right:1px solid #d3dbec;border-bottom:1px solid #d3dbec;width:14em;vertical-align:top;overflow:visible}#navigation h1{background-color:white;border-bottom:1px solid #d3dbec;padding:15px;margin-top:0px;margin-bottom:0px}#navigation h2{font-size:18px;background-color:white;border-bottom:1px solid #d3dbec;padding-left:15px;padding-right:15px;padding-top:10px;padding-bottom:10px;margin-top:30px;margin-bottom:0px}#content h1{background-color:#2c3e67;color:white;padding:15px;margin:0px}#content h2{background-color:#6c7ea7;color:white;padding:15px;padding-top:15px;padding-bottom:15px;margin-top:0px}#content h2 a{background-color:#6c7ea7;color:white;text-decoration:none}#content h2 a:hover{text-decoration:underline}#content h3{font-style:italic;padding-top:15px;padding-bottom:4px;margin-right:15px;margin-left:15px;margin-bottom:5px;border-bottom:solid 1px #bcd}#content pre{margin:15px}pre{background-color:rgb(50,55,68);color:white;border-radius:3px;padding:15px;overflow:auto;font-family:monospace;max-width:720px}#navigation ul{font-size:1em;list-style-type:none;margin:1px 1px 10px 1px}#navigation li{text-indent:-1em;display:block;margin:3px 0px 0px 0}#content{margin-left:14em}#content p{padding-left:15px;padding-right:15px}table,table td{border:solid 1px rgb(193,204,228)}table{border-spacing:0;margin-left:15px;margin-right:15px}table td{padding:2px}#about{padding:15px;padding-left:16em;background-color:white;border-top:1px solid #d3dbec;border-bottom:1px solid #d3dbec}table.function_list{border-width:1px;border-style:solid;border-color:#cccccc;border-collapse:collapse;margin:15px}table.function_list td{border-width:1px;padding-left:10px;padding-right:10px;padding-top:5px;padding-bottom:5px}table.function_list td.name{background-color:white;min-width:200px;border-right-width:0px}table.function_list td.summary{background-color:white;width:100%;border-left-width:0px}dl.function{margin-right:15px;margin-left:15px;border-bottom:solid 1px rgb(193,204,228);border-left:solid 1px rgb(193,204,228);border-right:solid 1px rgb(193,204,228);background-color:white}dl.function dt{color:rgb(99,123,188);font-family:monospace;border-top:solid 1px rgb(193,204,228);padding:15px}dl.function dd{margin-left:15px;margin-right:15px;margin-top:5px;margin-bottom:15px}#content dl.function dd h3{margin-top:0px;margin-left:0px;padding-left:0px;font-size:16px;color:rgb(128,128,128);border-bottom:solid 1px #def}#content dl.function dd ul,#content dl.function dd ol{padding:0px;padding-left:15px;margin-left:16px;list-style-type:disc}ul.nowrap{overflow:auto;white-space:nowrap}.deprecated_label{color:#9db9f3;font-weight:normal}a:target+*{background-color:#FF9}#navigation h1{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTU4cHQiIGhlaWdodD0iMTM4cHQiIHZpZXdCb3g9IjAgMCAxNTggMTM4IiB2ZXJzaW9uPSIxLjEiPgo8ZGVmcz4KPGltYWdlIGlkPSJpbWFnZTYiIHdpZHRoPSI2NTkiIGhlaWdodD0iNTc1IiB4bGluazpocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQXBNQUFBSS9DQVlBQUFBcnlGSm9BQUFBQm1KTFIwUUEvd0QvQVArZ3ZhZVRBQUFROUVsRVFWUjRuTzNkVVlpbDUxM0g4Zjk3NXN5bXRDVFZzaHBLUzB0RTAxaVZYZ1Z0VVMraUtCUWlaaVlydHJ1enJZS3JkaWN1ZUtFZ0loTlFGTDJ3ZHJkSnpVV0l1NmtyVGlaUVdiQ2dsU0J0RVJaVUxKZ2cwWWh4TmVDdU1VM1lKTE56enV1RjJTUmVOSFA2bTdQdnMzdm04NEc1T0xsNG50OVYrSEtla05PdHJxMzNCUUN3UjExWDl6OTIrdFJHeXcycm4xeS9veWIxWk1zTjE0bHpXMmRPM1QzRVJhTWhMZ0VBWURHSlNRQUFZbUlTQUlDWW1BUUFJQ1ltQVFDSWlVa0FBR0ppRWdDQW1KZ0VBQ0FtSmdFQWlJbEpBQUJpWWhJQWdKaVlCQUFnSmlZQkFJaUpTUUFBWW1JU0FJQ1ltQVFBSUNZbUFRQ0lpVWtBQUdKaUVnQ0EyTGoxQUFDQWVabjAzWlYrUEhsZjZ4MnpXdDRaL1VCZjlhZXRkK3lGbUFRQUZzYlMwazYvOWZDRHo3YmVNYXVWVHh5L3JadDJyV2ZzaVdkdUFBQml2cGtFQUJiR1pETHVEaDA5L3VIV08yWTE2YnZ2YmIxaHI4UWtBTEF3bHJwK2VUcnR2dHA2eDZ4dTdBZnUvK09aR3dDQW1KZ0VBQ0FtSmdFQWlJbEpBQUJpWWhJQWdKaVlCQUFnSmlZQkFJaUpTUUFBWW1JU0FJQ1ltQVFBSUNZbUFRQ0lpVWtBQUdKaUVnQ0FtSmdFQUNBbUpnRUFpSWxKQUFCaVloSUFnTmk0OVFBQWdCdkEzeDNZMmY2eGEzWDQ5dmpBejFmVmIxNnI4NjhsTVFrQXNJdSs2c3Jac3c5ZHZGYm5yeDVaZjZtNmEzWDZ0ZVdaR3dDQW1HOG1BUUIyMFZYL3pudlcxdSthMTNuamJycTllZnFCTDgvcnZKYkVKQURBcnJvUGpLcStOSy9UcHYzb3VhcDY5N3pPYThrek53QUFNVEVKQUVCTVRBSUFFQk9UQUFERXhDUUFBREV4Q1FCQVRFd0NBQkFUa3dBQXhNUWtBQUF4TVFrQVFFeE1BZ0FRRTVNQUFNVEVKQUFBTVRFSkFFQk1UQUlBRUJPVEFBREV4Q1FBQURFeENRQkFiTng2QUFEQTNHeFB0bXRwNmVuV00zYlRWL2Y4eXNlUHYvLzFmOURWcUtybXVmcy81bmpXV3hLVEFNREMyUHJqQi8rbHFyNnI5WTdBNzcvMmQ4UHh6QTBBUUV4TUFnQVFFNU1BQU1URUpBQUFNVEVKQUVCTVRBSUFFQk9UQUFERXhDUUFBREV4Q1FCQXpDL2dBQUFMNDlDaGpRTTdiL3Z2MitkNTVyaGZldVdOVDlPbG5hNWYzdXVabzlGU1A1clVxNitmT3JreW5vNUhjK3V5Y2RkOWZmUDBIL3pidk01N3k3dUd1QVFBWUFqVGQxejhqdEdrdmpiSEl5OXZQdnFaZDF6OWNPK1I5WjhaVlQyODUxT24wMHViajU0NmVQWGp5dEgxVDQzNjZXZjNmTzdWNC9zNlYxVjN6K3U4dCtLWkd3Q0FtSmdFQUNBbUpnRUFpSWxKQUFCaVloSUFnSmlZQkFBZ0ppWUJBSWlKU1FBQVltSVNBSUNZbUFRQUlDWW1BUUNJaVVrQUFHSmlFZ0NBbUpnRUFDQW1KZ0VBaUlsSkFBQmlZaElBZ0ppWUJBQWdKaVlCQUlpSlNRQUFZbUlTQUlDWW1BUUFJQ1ltQVFDSWlVa0FBR0ppRWdDQW1KZ0VBQ0FtSmdFQWlJbEpBQUJpWWhJQWdKaVlCQUFnSmlZQkFJaUpTUUFBWW1JU0FJQ1ltQVFBSUNZbUFRQ0lpVWtBQUdKaUVnQ0FtSmdFQUNBbUpnRUFpSWxKQUFCaVloSUFnSmlZQkFBZ05tNDlBQURnT3JaMHo5cjZYVmMvOUYxOXNQcTVuTHY4NW5PN3Z2OUFWVGVYZzRjbUpnRUF2ckdiUmxWZmV2M1RmRUt5cXVxVy8zZnVEUnFTVlo2NUFRRFlBekVKQUVCTVRBSUFFQk9UQUFERXhDUUFBREV4Q1FCQVRFd0NBQkFUa3dBQXhNUWtBQUF4TVFrQVFFeE1BZ0FRRTVNQUFNVEVKQUFBTVRFSkFFQk1UQUlBRUJPVEFBREV4Q1FBQURFeENRQkFURXdDQUJBVGt3QUF4TWF0QndBQXpNdG91dlBpdEphLzBIcEhlLzM1b1c0U2t3REF3dGc4L2JrTFZmV1RyWGZzSjU2NUFRQ0lpVWtBQUdKaUVnQ0FtSmdFQUNBbUpnRUFpSWxKQUFCaVloSUFnSmlZQkFBZ0ppWUJBSWo1QlJ3QVlHSDh4TS8reXMzam5jc2ZiYjJqdGFXYVh0ZzgvY0NYaDdoTFRBSUFDMk41ZXZrOTFkZWZ0TjdSMnJSRzU2cHFrSmowekEwQVFFeE1BZ0FRRTVNQUFNVEVKQUFBTVRFSkFFQk1UQUlBRUJPVEFBREV4Q1FBQUxIeHBXY1BMcmNlQWJEZnZldDlGMytxNit2enJYY0FmTFBHVHp5eHNkTjZCTUIrdDNyaytFNTFYZXNaQU44MHo5d0FBTVRFSkFBQU1URUpBRUJNVEFJQUVCT1RBQURFeENRQUFERXhDUUJBVEV3Q0FCQWJ0eDRBQUhBRGVLbXYrbHJyRVRQcit3dERYU1VtQVFCMjBWZjk0K05uVG4yazlZNVpyUncrY2VkUWQzbm1CZ0FnSmlZQkFJaDU1Z1lBMk1XbzZ2MnJSOWMvM1hySHJQcnA1RkpWblIvaUxqRUpBTENMdnVyVzZ1dEU2eDJ6NnJvNk45UmRucmtCQUlpSlNRQUFZbUlTQUlDWW1BUUFJQ1ltQVFDSWlVa0FBR0ppRWdDQW1KZ0VBQ0FtSmdFQWlJbEpBQUJpWWhJQWdKaVlCQUFnSmlZQkFJaU43MTA3L3RPdFJ3RHNkMzNWaDF0dkFFaU0rK3JPdGg0QkFNQ055VE0zQUFDeGNlc0JBQURYdi83RnJycnpyVmZNcXUvclg0ZTZTMHdDQU95aXIrN0pyVE9uZnFUMWpsbXRIRDV4NTFCM2VlWUdBQ0FtSmdFQWlIbm1CZ0RZUlZkMTIrcmEraCsyM2pHNzZYTlZOY2gvNHlrbUFRQjI5MjFWZGF6MWlObjE1NGE2eVRNM0FBQXhNUWtBUUV4TUFnQVFFNU1BQU1URUpBQUFNVEVKQUVCTVRBSUFFQk9UQUFERXhDUUFBREV4Q1FCQVRFd0NBQkFUa3dBQXhNUWtBQUF4TVFrQVFFeE1BZ0FRRTVNQUFNVEVKQUFBTVRFSkFFQnMzSG9BQU1DOEhIaDErK0wyK01CdnRkN1JYRmRQRFhXVm1BUUFGc2Jac3c5ZHJLcGZiNzFqUC9ITURRQkFURXdDQUJBVGt3QUF4TVFrQUFBeE1Ra0FRRXhNQWdBUUU1TUFBTVRFSkFBQU1URUpBRURNTCtBQUFBdmpZeDg3ZHZES2VQbEU2eDNOOWFPbkhudjA1T2VIdUVwTUFnQUxZL3VtQXdkcjR1Y1VxK3ZQVmRVZ01lbVpHd0NBbUpnRUFDQW1KZ0VBaUlsSkFBQmlZaElBZ0ppWUJBQWdKaVlCQUlpSlNRQUFZbUlTQUlDWW1BUUFJQ1ltQVFDSWlVa0FBR0ppRWdDQW1KZ0VBQ0FtSmdFQWlJbEpBQUJpWWhJQWdKaVlCQUFnTm00OUFBRGdCdkJmZmRkOW9mV0ltVTJtencxMWxaZ0VBTmhGWC9YTTQ2ZFAvbHpySGJOYU9Yeml6cUh1OHN3TkFFQk1UQUlBRVBQTURRQ3dpNjdxanRXMTliOW92V05XZlUyZXJLcnpROXdsSmdFQWRuZExWZjFvNnhHejZxcGVHZW91ejl3QUFNVEVKQUFBTVRFSkFFQk1UQUlBRUJPVEFBREV4Q1FBQURFeENRQkFURXdDQUJBVGt3QUF4TVFrQUFBeE1Ra0FRRXhNQWdBUUU1TUFBTVRFSkFBQU1URUpBRUJNVEFJQUVCdTNIZ0FBTUQralNkWGtNNjFYeks1N2IxV3R0RjZ4RjJJU0FGZ2NveXVUclVjZVBORjZ4cXhXUG5IOGg3dHBkMFBIcEdkdUFBQmlZaElBZ0pobmJnQmdZWXkyYTNsMTdmaFhXdStZMmJSN1orc0pleVVtQVlDRk1SMHZkVFdwajdUZXNaOTQ1Z1lBSUNZbUFRQ0lpVWtBQUdKaUVnQ0FtSmdFQUNBbUpnRUFpSWxKQUFCaVloSUFnSmlZQkFBZ0ppWUJBSWlKU1FBQVltSVNBSUNZbUFRQUlDWW1BUUNJaVVrQUFHSmlFZ0NBbUpnRUFDQW1KZ0VBaUkxYkR3QUFtSmNybzdkZldONTUrZU90ZDdUV0wwMHZESFdYbUFRQUZzYWZQZnk3TDFiVjJkWTc5aFBQM0FBQXhNUWtBQUF4TVFrQVFFeE1BZ0FRRTVNQUFNVEVKQUFBTVRFSkFFQk1UQUlBRUJPVEFBREUvQUlPQUxBd0RoMzloZmYwMC9ISjFqdGFtM2I5K2NmUGZQYTNoN2hMVEFJQUMyTTZHdDljZmQzVGVrZHJYWFhMUTkzbG1Sc0FnSmlZQkFBZ0ppWUJBSWlKU1FBQVltSVNBSUNZbUFRQUlDWW1BUUNJaVVrQUFHSmlFZ0NBbUpnRUFDQW1KZ0VBaUlsSkFBQmlZaElBZ0ppWUJBQWdKaVlCQUlpSlNRQUFZbUlTQUlDWW1BUUFJQ1ltQVFDSWlVa0FBR0xqMWdNQUFCYkVTOVYxOTd6K3FaL2VYZFg5VXNNOWd4Q1RBQUR6Y1dYcjlNbS92UHBoZFczOU8xdU9HWXBuYmdBQVltSVNBSUNZbUFRQUlDWW1BUUNJaVVrQUFHSmlFZ0NBbUpnRUFDQW1KZ0VBaUlsSkFBQmlmZ0dIUmJCZFZmL2VlZ1EwOUsydi9RRU1Ua3l5Q0o3ZU9uUHFlMXFQZ0ZaVzErNjd2NnIvamRZN2dQM0pNemNBQURFeENRQkFURXdDQUJBVGt3QUF4TVFrQUFBeE1Ra0FRRXhNQWdBUUU1TUFBTVRFSkFBQU1iK0FBd0F3SDdlc3JxMy96UnNmKzF1cnVuWnJCaUltQVFEbVk2bXF2ditOajRzZmtsV2V1UUVBMkFNeENRQkFURXdDQUJBVGt3QUF4TVFrQUFBeE1Ra0FRRXhNQWdBUUU1TUFBTVRFSkFBQU1URUpBRUJNVEFJQUVCT1RBQURFeENRQUFERXhDUUJBVEV3Q0FCQVRrd0FBeE1Ra0FBQ3hjZXNCc0ZkOWRkKytldlMrMzJtOUE2cnEwdGJwazcvWGVnVEFrTVFrTjd5dStvUFYxNisyM2dGVjlYUlZpVWxnWC9ITURRQkF6RGVUQU1EQ3VIeHo5OHpiWDlqNVVPc2RyVTFHTjMxOXFMdkVKQUN3TVA3ODVNbFhxK29mV3UvWVR6eHpBd0FRRTVNQUFNVEVKQUFBTVRFSkFFQk1UQUlBRUJPVEFBREV4Q1FBQURFeENRQkFURXdDQUJEekN6Z0F3TUk0dExaKzI3VHFpNjEzWEFmK2F1dk1xVjhjNGlJeENRQXNqT2xTM1ZTVHVyMzFqdXZBUHcxMWtXZHVBQUJpWWhJQWdKaVlCQUFnSmlZQkFJaUpTUUFBWW1JU0FJQ1ltQVFBSUNZbUFRQ0lpVWtBQUdKaUVnQ0FtSmdFQUNBbUpnRUFpSWxKQUFCaVloSUFnSmlZQkFBZ0ppWUJBSWlKU1FBQVltSVNBSUNZbUFRQUlDWW1BUUNJaVVrQWdHL3M1ZEhTOU4xWC82cnFsK2QwN3ZOdlByZXYvdGZtZE83Z3hxMEhBQUJjeC9yTlJ4NTQ3dXFIZTQrcy8wL2Z6ZVhjNlp2UFhUbTYva0wxY3psM2NMNlpCQUFnSmlZQkFJaUpTUUFBWW1JU0FJQ1ltQVFBSUNZbUFRQ0lpVWtBQUdKaUVnQ0FtSmdFQUNBbUpnRUFpSWxKQUFCaVloSUFnSmlZQkFBZ0ppWUJBSWlKU1FBQVltSVNBSUNZbUFRQUlDWW1BUUNJaVVrQUFHSmlFZ0NBbUpnRUFDQW1KZ0VBaUlsSkFBQmlZaElBZ0ppWUJBQWdKaVlCQUlpSlNRQUFZbUlTQUlDWW1BUUFJQ1ltQVFDSWlVa0FBR0ppRWdDQW1KZ0VBQ0FtSmdFQWlJbEpBQUJpWWhJQWdKaVlCQUFnSmlZQkFJaUpTUUFBWW1JU0FJQ1ltQVFBSUNZbUFRQ0lqVnNQQUFDWWw2MUhUajIxc2JHeE5NOHp2MjlqNDgxZnZ2M1JhMy96UHZkenIvM054Y2JHUmordnMzWWpKZ0dBaGJLeHNURnR2V0UvOGN3TkFFQk1UQUlBRUJPVEFBREV4Q1FBQURFeENRQkFURXdDQUJBVGt3QUF4TVFrQUFBeC85TnlBR0NoSER0MmJMbjFodGFlZi83NTZlYm01bVNJdThRa0FMQXdWais1ZnNlbGwrdkoxanVhZTl1dDU2cnE3aUd1OHN3TkFFQk1UQUlBRUJPVEFBREV4Q1FBQURFeENRQkFURXdDQUJBVGt3QUF4TVFrQUFBeE1Ra0FRRXhNQWdBUUU1TUFBTVRFSkFBQU1URUpBRUJNVEFJQUVCT1RBQURFeENRQUFERXhDUUJBVEV3Q0FCQVRrd0FBeE1hdEJ3QUFYUGY2K3Z1K3hoOXRQV05Xby83S0I0ZTZTMHdDQU95aTcycjc4VE9mL3MvV08yYTFjdmpFZTRlNnl6TTNBQUF4MzB3Q0FPeWlxN3JsM2lQMy9WRHJIYk9hanFhM1Z0WDVJZTRTa3dBQXU3dWo3L3EvYmoxaVZsMWY1NnJxc1NIdThzd05BRUJNVEFJQUVCT1RBQURFeENRQUFERXhDUUJBVEV3Q0FCQVRrd0FBeE1Ra0FBQXhNUWtBUUV4TUFnQVFFNU1BQU1URUpBQUFNVEVKQUVCTVRBSUFFQk9UQUFERXhDUUFBREV4Q1FCQWJOeDZBQURBRGVCdlI2OXMzOVY2eEt3bXk4c2ZHdW91TVFrQXNJdSthbWR6ODZFWFd1K1kxY3JoRXk4UGRaZG5iZ0FBWXI2WkJBRFlSVmYxTGF0cjZ6L2Vlc2ZNK3VtN3F1cjhFRmVKU1FDQTNkMWVWVjlzUFdKbVhYK3VxczRPY1pWbmJnQUFZbUlTQUlDWW1BUUFJQ1ltQVFDSWlVa0FBR0ppRWdDQW1KZ0VBQ0FtSmdFQWlJbEpBQUJpWWhJQWdKaVlCQUFnSmlZQkFJaUpTUUFBWW1JU0FJQ1ltQVFBSUNZbUFRQ0lpVWtBQUdKaUVnQ0EyTGoxQUFDQWVSbE42dFZwMVZPdGR6VFhkYzhPZFpXWUJBQVd4dWFaVTg5VTFYZTMzckdmZU9ZR0FDQW1KZ0VBaUlsSkFBQmlZaElBZ0ppWUJBQWdOdTY2dXIvMUNJQ0YwTmZsUTBjLzlZT0RYOXZWUDFmdjMrVmNCNmIxUk9zSkFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBemYwdjdYV3pUL1VhRG1FQUFBQUFTVVZPUks1Q1lJST0iLz4KPC9kZWZzPgo8ZyBpZD0ic3VyZmFjZTIiPgo8dXNlIHhsaW5rOmhyZWY9IiNpbWFnZTYiIHRyYW5zZm9ybT0ibWF0cml4KDAuMjQsMCwwLDAuMjQsMCwwKSIvPgo8L2c+Cjwvc3ZnPgo=);height:160px;background-position:10px 10px;background-repeat:no-repeat;color:transparent}</style>
+<link type=image/x-icon rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADwSURBVDjLpdOxasJAAIDhE+wgDpY6CTq5iAVxFUEcnR2FuuojVBCddXF1UxycHRycRCkUJx2E7h0C+gQiFON/eJYkcIcxwqc5cvfjXYiwbVsEcfsSImKatBLlJN5dC9Ua+UnjFx+GwBAHx+IKLOTkII41Sj4CeXwj8dA+vQHXVrhRw0rJyr1iibouwHVfzZ/LwSdsDJBSE9o4o6gJLGCh6wy8ev72FEcZ1QQ29y3oAjGcsMXkmUBXBXb48xXgOqPOoIU3/Dwc4DeEL+zxYjhEbaCBCwqGx+gKVDFDFGGMZdRzHk2MHOMOev8vU+C3MYgr9KNHJ4r75sgAAAAASUVORK5CYII="><style>.sf-hidden{display:none!important}</style><link rel=canonical href=https://awesomewm.org/doc/api/libraries/beautiful.html#useless_gap><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body>
+<div id=container>
+<div id=product>
+ <div id=product_logo></div>
+ <div id=product_name><big><b></b></big></div>
+ <div id=product_description></div>
+</div> 
+<div id=main>
+<div id=navigation>
+<br class=sf-hidden>
+<h1>awesome</h1>
+<ul>
+ <li><a href=https://awesomewm.org/doc/api/index.html>Index</a></li>
+</ul>
+<h2>Contents</h2>
+<ul>
+<li><a href=#Functions>Functions</a></li>
+<li><a href=#Theme_variables>Theme variables</a></li>
+<li><a href=#Fields>Fields</a></li>
+<li><a href=#lib_beautiful_theme_assets_Functions>lib.beautiful.theme_assets Functions</a></li>
+<li><a href=#lib_beautiful_xresources_Functions>lib.beautiful.xresources Functions</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class=nowrap>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awesome.html>awesome</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.client.html>awful.client</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.completion.html>awful.completion</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.ewmh.html>awful.ewmh</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.hotkeys_popup.html>awful.hotkeys_popup</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.hotkeys_popup.widget.html>awful.hotkeys_popup.widget</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.key.html>awful.key</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.layout.html>awful.layout</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.menu.html>awful.menu</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.mouse.html>awful.mouse</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.placement.html>awful.placement</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.prompt.html>awful.prompt</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.rules.html>awful.rules</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.screen.html>awful.screen</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.spawn.html>awful.spawn</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.tag.html>awful.tag</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.util.html>awful.util</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/awful.wibox.html>awful.wibox</a></li>
+ <li><strong>beautiful</strong></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/beautiful.gtk.html>beautiful.gtk</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/dbus.html>dbus</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.color.html>gears.color</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.debug.html>gears.debug</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.filesystem.html>gears.filesystem</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.geometry.html>gears.geometry</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.math.html>gears.math</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.protected_call.html>gears.protected_call</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.shape.html>gears.shape</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.sort.html>gears.sort</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.string.html>gears.string</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.surface.html>gears.surface</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.table.html>gears.table</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/gears.wallpaper.html>gears.wallpaper</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/menubar.html>menubar</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/menubar.menu_gen.html>menubar.menu_gen</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/menubar.utils.html>menubar.utils</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/mouse.html>mouse</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/mousegrabber.html>mousegrabber</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/naughty.html>naughty</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/naughty.dbus.html>naughty.dbus</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/root.html>root</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/selection.html>selection</a></li>
+ <li><a href=https://awesomewm.org/doc/api/libraries/wibox.hierarchy.html>wibox.hierarchy</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class=nowrap>
+ <li><a href=https://awesomewm.org/doc/api/sample%20files/rc.lua.html>rc.lua</a></li>
+ <li><a href=https://awesomewm.org/doc/api/sample%20files/theme.lua.html>theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class=nowrap>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.button.html>awful.button</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.keygrabber.html>awful.keygrabber</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.popup.html>awful.popup</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.titlebar.html>awful.titlebar</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.tooltip.html>awful.tooltip</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.wibar.html>awful.wibar</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.button.html>awful.widget.button</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.calendar_popup.html>awful.widget.calendar_popup</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.clienticon.html>awful.widget.clienticon</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.common.html>awful.widget.common</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.keyboardlayout.html>awful.widget.keyboardlayout</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.launcher.html>awful.widget.launcher</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.layoutbox.html>awful.widget.layoutbox</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.layoutlist.html>awful.widget.layoutlist</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.only_on_screen.html>awful.widget.only_on_screen</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.prompt.html>awful.widget.prompt</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.taglist.html>awful.widget.taglist</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.tasklist.html>awful.widget.tasklist</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.textclock.html>awful.widget.textclock</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/awful.widget.watch.html>awful.widget.watch</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/button.html>button</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/client.html>client</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/drawable.html>drawable</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/gears.cache.html>gears.cache</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/gears.matrix.html>gears.matrix</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/gears.object.html>gears.object</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/gears.timer.html>gears.timer</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/key.html>key</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/menubar.icon_theme.html>menubar.icon_theme</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/menubar.index_theme.html>menubar.index_theme</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/screen.html>screen</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/signals.html>signals</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/tag.html>tag</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.html>wibox</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.arcchart.html>wibox.container.arcchart</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.background.html>wibox.container.background</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.constraint.html>wibox.container.constraint</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.margin.html>wibox.container.margin</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.mirror.html>wibox.container.mirror</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.place.html>wibox.container.place</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.radialprogressbar.html>wibox.container.radialprogressbar</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.rotate.html>wibox.container.rotate</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.container.scroll.html>wibox.container.scroll</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.drawable.html>wibox.drawable</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.layout.align.html>wibox.layout.align</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.layout.fixed.html>wibox.layout.fixed</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.layout.flex.html>wibox.layout.flex</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.layout.grid.html>wibox.layout.grid</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.layout.manual.html>wibox.layout.manual</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.layout.ratio.html>wibox.layout.ratio</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.layout.stack.html>wibox.layout.stack</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.html>wibox.widget</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.base.html>wibox.widget.base</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.calendar.html>wibox.widget.calendar</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.checkbox.html>wibox.widget.checkbox</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.graph.html>wibox.widget.graph</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.imagebox.html>wibox.widget.imagebox</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.piechart.html>wibox.widget.piechart</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.progressbar.html>wibox.widget.progressbar</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.separator.html>wibox.widget.separator</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.slider.html>wibox.widget.slider</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.systray.html>wibox.widget.systray</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.textbox.html>wibox.widget.textbox</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/wibox.widget.textclock.html>wibox.widget.textclock</a></li>
+ <li><a href=https://awesomewm.org/doc/api/classes/xproperties.html>xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class=nowrap>
+ <li><a href=https://awesomewm.org/doc/api/documentation/00-authors.md.html>Authors</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/01-readme.md.html>Readme</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/02-contributing.md.html>Contributing</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/03-declarative-layout.md.html>The AwesomeWM widget system</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/04-new-widgets.md.html>Creating new widget</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/05-awesomerc.md.html>Default configuration file documentation</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/06-appearance.md.html>Change Awesome appearance</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/07-my-first-awesome.md.html>My first Awesome</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/16-using-cairo.md.html>Using Cairo and LGI</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/17-porting-tips.md.html>Tips for upgrading your configuration</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/89-NEWS.md.html>NEWS</a></li>
+ <li><a href=https://awesomewm.org/doc/api/documentation/90-FAQ.md.html>FAQ</a></li>
+</ul>
+</div>
+<div id=content>
+<h1>Module <code>beautiful</code></h1>
+<p>Theme library.</p>
+<p></p>
+ <h3>Info:</h3>
+ <ul>
+ <li><strong>Copyright</strong>: 2008-2009 Damien Leone, Julien Danjou</li>
+ <li><strong>Author</strong>: Damien Leone &lt;damien.leone@gmail.com&gt;,Julien Danjou &lt;julien@danjou.info&gt;</li>
+ </ul>
+<h2><a href=#Functions>Functions</a></h2>
+<table class=function_list>
+ <tbody><tr>
+ <td class=name><a href=#get_font>get_font (name)</a></td>
+ <td class=summary>Get a font description.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#get_merged_font>get_merged_font (name, merge)</a></td>
+ <td class=summary>Get a new font with merged attributes, based on another one.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#get_font_height>get_font_height (name)</a></td>
+ <td class=summary>Get the height of a font.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#init>init (config)</a></td>
+ <td class=summary>Function that initializes the theme settings.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#get>get ()</a></td>
+ <td class=summary>Get the current theme.</td>
+ </tr>
+</table>
+<h2><a href=#Theme_variables>Theme variables</a></h2>
+<table class=function_list>
+ <tbody><tr>
+ <td class=name><a href=#font>font</a></td>
+ <td class=summary>The default font.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#useless_gap>useless_gap</a></td>
+ <td class=summary>The gap between clients.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#border_width>border_width</a></td>
+ <td class=summary>The client border width.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#border_normal>border_normal</a></td>
+ <td class=summary>The default clients border color.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#border_focus>border_focus</a></td>
+ <td class=summary>The focused client border color.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#border_marked>border_marked</a></td>
+ <td class=summary>The marked clients border color.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#wallpaper>wallpaper</a></td>
+ <td class=summary>The wallpaper path.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#awesome_icon>awesome_icon</a></td>
+ <td class=summary>The Awesome icon path.</td>
+ </tr>
+</table>
+<h2><a href=#Fields>Fields</a></h2>
+<table class=function_list>
+ <tbody><tr>
+ <td class=name><a href=#theme_path>theme_path</a></td>
+ <td class=summary>The current theme path (if any)</td>
+ </tr>
+</table>
+<h2><a href=#lib_beautiful_theme_assets_Functions>lib.beautiful.theme_assets Functions</a></h2>
+<table class=function_list>
+ <tbody><tr>
+ <td class=name><a href=#theme_assets.taglist_squares_sel>theme_assets.taglist_squares_sel (size, fg)</a></td>
+ <td class=summary>Generate selected taglist square.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#theme_assets.taglist_squares_unsel>theme_assets.taglist_squares_unsel (size, fg)</a></td>
+ <td class=summary>Generate unselected taglist square.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#theme_assets.gen_awesome_name>theme_assets.gen_awesome_name (cr, height, bg, fg, alt_fg)</a></td>
+ <td class=summary>Put Awesome WM name onto cairo surface.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#theme_assets.gen_logo>theme_assets.gen_logo (cr, width, height, bg, fg)</a></td>
+ <td class=summary>Put Awesome WM logo onto cairo surface.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#theme_assets.awesome_icon>theme_assets.awesome_icon (size, bg, fg)</a></td>
+ <td class=summary>Generate Awesome WM logo.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#theme_assets.wallpaper>theme_assets.wallpaper (bg, fg, alt_fg, s)</a></td>
+ <td class=summary>Generate Awesome WM wallpaper.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#theme_assets.recolor_titlebar>theme_assets.recolor_titlebar (theme, color, state, postfix)</a></td>
+ <td class=summary>Recolor titlebar icons.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#recolor_titlebar_normal>recolor_titlebar_normal</a> <i class=deprecated_label>[deprecated]</i><a></a></td>
+ <td class=summary>Recolor unfocused titlebar icons.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#recolor_titlebar_focus>recolor_titlebar_focus</a> <i class=deprecated_label>[deprecated]</i><a></a></td>
+ <td class=summary>Recolor focused titlebar icons.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#theme_assets.recolor_layout>theme_assets.recolor_layout (theme, color)</a></td>
+ <td class=summary>Recolor layout icons.</td>
+ </tr>
+</table>
+<h2><a href=#lib_beautiful_xresources_Functions>lib.beautiful.xresources Functions</a></h2>
+<table class=function_list>
+ <tbody><tr>
+ <td class=name><a href=#xresources.get_current_theme>xresources.get_current_theme ()</a></td>
+ <td class=summary>Get current base colorscheme from xrdb.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#xresources.get_dpi>xresources.get_dpi</a> <i class=deprecated_label>[deprecated]</i><a></a></td>
+ <td class=summary>Get global or per-screen DPI value falling back to xrdb.</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#xresources.set_dpi>xresources.set_dpi (dpi[, s])</a></td>
+ <td class=summary>Set DPI for a given screen (defaults to global).</td>
+ </tr>
+ <tr>
+ <td class=name><a href=#xresources.apply_dpi>xresources.apply_dpi (size[, s])</a></td>
+ <td class=summary>Compute resulting size applying current DPI value (optionally per screen).</td>
+ </tr>
+</table>
+<br>
+<br>
+ <h2 class=section-header><a name=Functions></a>Functions</h2>
+ Methods
+ <dl class=function>
+ <dt>
+ <a name=get_font></a>
+ <strong>get_font (name)</strong>
+ </dt>
+ <dd>
+ Get a font description.<p></p>
+<p> See https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription.
+ <ul>
+ <li><span class=parameter>name</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.4>string</a> or <span class=type>lgi.Pango.FontDescription</span></span>
+ The name of the font.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><span class=type>lgi.Pango.FontDescription</span></span>
+ </ol>
+</dd>
+ <dt>
+ <a name=get_merged_font></a>
+ <strong>get_merged_font (name, merge)</strong>
+ </dt>
+ <dd>
+ Get a new font with merged attributes, based on another one.<p></p>
+<p> See https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-from-string.
+ <ul>
+ <li><span class=parameter>name</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.4>string</a> or <span class=type>Pango.FontDescription</span></span>
+ The base font.
+ </li>
+ <li><span class=parameter>merge</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.4>string</a></span>
+ Attributes that should be merged, e.g. “bold”.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><span class=type>lgi.Pango.FontDescription</span></span>
+ </ol>
+</dd>
+ <dt>
+ <a name=get_font_height></a>
+ <strong>get_font_height (name)</strong>
+ </dt>
+ <dd>
+ Get the height of a font.
+ <ul>
+ <li><span class=parameter>name</span>
+ Name of the font
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=init></a>
+ <strong>init (config)</strong>
+ </dt>
+ <dd>
+ <p>Function that initializes the theme settings. Should be run at the
+ beginning of the awesome configuration file (normally rc.lua).</p>
+<p> Example usages:</p>
+<pre><code>-- Using a table
+beautiful.init({font = 'Monospace Bold 10'})
+
+-- From a config file
+beautiful.init("&lt;path&gt;/theme.lua")
+</code></pre>
+<p> Example “<path>/theme.lua” (see <a href=https://awesomewm.org/doc/api/documentation/05-awesomerc.md.html#Variable_definitions>05-awesomerc.md:Variable_definitions</a>):</path></p>
+<pre><code>theme = {}
+    theme.font = 'Monospace Bold 10'
+return theme
+</code></pre>
+<p> Example using the return value:</p>
+<pre><code>local beautiful = require("beautiful")
+if not beautiful.init("&lt;path&gt;/theme.lua") then
+    beautiful.init("&lt;path&gt;/.last.theme.lua") -- a known good fallback
+end
+</code></pre>
+ <ul>
+ <li><span class=parameter>config</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.4>string</a> or <a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a></span>
+ The theme to load. It can be either the path to
+ the theme file (which should return a table) or directly a table
+ containing all the theme values.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><span class=type>true</span> or <span class=type>nil</span></span>
+ True if successful, nil in case of error.
+ </ol>
+</dd>
+ <dt>
+ <a name=get></a>
+ <strong>get ()</strong>
+ </dt>
+ <dd>
+ Get the current theme.
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a></span>
+ The current theme table.
+ </ol>
+</dd>
+</dl>
+ <h2 class=section-header><a name=Theme_variables></a>Theme variables</h2>
+ <dl class=function>
+ <dt>
+ <a name=font></a>
+ <strong>font</strong>
+ </dt>
+ <dd>
+ The default font.
+</dd>
+ <dt>
+ <a name=useless_gap></a>
+ <strong>useless_gap</strong>
+ </dt>
+ <dd>
+ The gap between clients.
+ <h3>Type:</h3>
+ <ul>
+ <li><span class=parameter>number</span>
+ (<em>default</em> 0)
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=border_width></a>
+ <strong>border_width</strong>
+ </dt>
+ <dd>
+ The client border width.
+</dd>
+ <dt>
+ <a name=border_normal></a>
+ <strong>border_normal</strong>
+ </dt>
+ <dd>
+ The default clients border color.
+ Note that only solid colors are supported.
+</dd>
+ <dt>
+ <a name=border_focus></a>
+ <strong>border_focus</strong>
+ </dt>
+ <dd>
+ The focused client border color.
+ Note that only solid colors are supported.
+</dd>
+ <dt>
+ <a name=border_marked></a>
+ <strong>border_marked</strong>
+ </dt>
+ <dd>
+ The marked clients border color.
+ Note that only solid colors are supported.
+</dd>
+ <dt>
+ <a name=wallpaper></a>
+ <strong>wallpaper</strong>
+ </dt>
+ <dd>
+ The wallpaper path.
+</dd>
+ <dt>
+ <a name=awesome_icon></a>
+ <strong>awesome_icon</strong>
+ </dt>
+ <dd>
+ The Awesome icon path.
+</dd>
+</dl>
+ <h2 class=section-header><a name=Fields></a>Fields</h2>
+ <dl class=function>
+ <dt>
+ <a name=theme_path></a>
+ <strong>theme_path</strong>
+ </dt>
+ <dd>
+ The current theme path (if any)
+</dd>
+</dl>
+ <h2 class=section-header><a name=lib_beautiful_theme_assets_Functions></a>lib.beautiful.theme_assets Functions</h2>
+ <dl class=function>
+ <dt>
+ <a name=theme_assets.taglist_squares_sel></a>
+ <strong>theme_assets.taglist_squares_sel (size, fg)</strong>
+ </dt>
+ <dd>
+ Generate selected taglist square.
+ <ul>
+ <li><span class=parameter>size</span>
+ <span class=types><span class=type>number</span></span>
+ Size.
+ </li>
+ <li><span class=parameter>fg</span>
+ <span class=types><span class=type>color</span></span>
+ Background color.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ Image with the square.
+ </ol>
+</dd>
+ <dt>
+ <a name=theme_assets.taglist_squares_unsel></a>
+ <strong>theme_assets.taglist_squares_unsel (size, fg)</strong>
+ </dt>
+ <dd>
+ Generate unselected taglist square.
+ <ul>
+ <li><span class=parameter>size</span>
+ <span class=types><span class=type>number</span></span>
+ Size.
+ </li>
+ <li><span class=parameter>fg</span>
+ <span class=types><span class=type>color</span></span>
+ Background color.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ Image with the square.
+ </ol>
+</dd>
+ <dt>
+ <a name=theme_assets.gen_awesome_name></a>
+ <strong>theme_assets.gen_awesome_name (cr, height, bg, fg, alt_fg)</strong>
+ </dt>
+ <dd>
+ Put Awesome WM name onto cairo surface.
+ <ul>
+ <li><span class=parameter>cr</span>
+ Cairo surface.
+ </li>
+ <li><span class=parameter>height</span>
+ <span class=types><span class=type>number</span></span>
+ Height.
+ </li>
+ <li><span class=parameter>bg</span>
+ <span class=types><span class=type>color</span></span>
+ Background color.
+ </li>
+ <li><span class=parameter>fg</span>
+ <span class=types><span class=type>color</span></span>
+ Main foreground color.
+ </li>
+ <li><span class=parameter>alt_fg</span>
+ <span class=types><span class=type>color</span></span>
+ Accent foreground color.
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=theme_assets.gen_logo></a>
+ <strong>theme_assets.gen_logo (cr, width, height, bg, fg)</strong>
+ </dt>
+ <dd>
+ Put Awesome WM logo onto cairo surface.
+ <ul>
+ <li><span class=parameter>cr</span>
+ Cairo surface.
+ </li>
+ <li><span class=parameter>width</span>
+ <span class=types><span class=type>number</span></span>
+ Width.
+ </li>
+ <li><span class=parameter>height</span>
+ <span class=types><span class=type>number</span></span>
+ Height.
+ </li>
+ <li><span class=parameter>bg</span>
+ <span class=types><span class=type>color</span></span>
+ Background color.
+ </li>
+ <li><span class=parameter>fg</span>
+ <span class=types><span class=type>color</span></span>
+ Foreground color.
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=theme_assets.awesome_icon></a>
+ <strong>theme_assets.awesome_icon (size, bg, fg)</strong>
+ </dt>
+ <dd>
+ Generate Awesome WM logo.
+ <ul>
+ <li><span class=parameter>size</span>
+ <span class=types><span class=type>number</span></span>
+ Size.
+ </li>
+ <li><span class=parameter>bg</span>
+ <span class=types><span class=type>color</span></span>
+ Background color.
+ </li>
+ <li><span class=parameter>fg</span>
+ <span class=types><span class=type>color</span></span>
+ Background color.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ Image with the logo.
+ </ol>
+</dd>
+ <dt>
+ <a name=theme_assets.wallpaper></a>
+ <strong>theme_assets.wallpaper (bg, fg, alt_fg, s)</strong>
+ </dt>
+ <dd>
+ Generate Awesome WM wallpaper.
+ <ul>
+ <li><span class=parameter>bg</span>
+ <span class=types><span class=type>color</span></span>
+ Background color.
+ </li>
+ <li><span class=parameter>fg</span>
+ <span class=types><span class=type>color</span></span>
+ Main foreground color.
+ </li>
+ <li><span class=parameter>alt_fg</span>
+ <span class=types><span class=type>color</span></span>
+ Accent foreground color.
+ </li>
+ <li><span class=parameter>s</span>
+ <span class=types><a class=type href=https://awesomewm.org/doc/api/classes/screen.html#>screen</a></span>
+ Screen (to get wallpaper size).
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ Wallpaper image.
+ </ol>
+</dd>
+ <dt>
+ <a name=theme_assets.recolor_titlebar></a>
+ <strong>theme_assets.recolor_titlebar (theme, color, state, postfix)</strong>
+ </dt>
+ <dd>
+ Recolor titlebar icons.
+ <ul>
+ <li><span class=parameter>theme</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a></span>
+ Beautiful theme table.
+ </li>
+ <li><span class=parameter>color</span>
+ <span class=types><span class=type>color</span></span>
+ Icons' color.
+ </li>
+ <li><span class=parameter>state</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.4>string</a></span>
+ <code>"normal"</code> or <code>"focus"</code>.
+ </li>
+ <li><span class=parameter>postfix</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.4>string</a></span>
+ <code>nil</code>, <code>"hover"</code> or <code>"press"</code>.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a></span>
+ Beautiful theme table with the images recolored.
+ </ol>
+</dd>
+ <dt>
+ <a name=recolor_titlebar_normal></a>
+ <strong>recolor_titlebar_normal <i class=deprecated_label>[deprecated]</i><a></a></strong><a>
+ </a></dt><a>
+ </a><dd><a>
+ Recolor unfocused titlebar icons.
+ This method is deprecated. Use a <code>beautiful.theme_assets.recolor_titlebar</code>.
+ <h3>param:</h3>
+ </a><ul><a>
+ </a><li><a><span class=parameter>theme</span>
+ <span class=types></span></a><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a>
+ Beautiful theme table
+ </li>
+ <li><span class=parameter>color</span>
+ <span class=types><span class=type>color</span></span>
+ Icons' color.
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=recolor_titlebar_focus></a>
+ <strong>recolor_titlebar_focus <i class=deprecated_label>[deprecated]</i><a></a></strong><a>
+ </a></dt><a>
+ </a><dd><a>
+ Recolor focused titlebar icons.
+ This method is deprecated. Use a <code>beautiful.theme_assets.recolor_titlebar</code>.
+ <h3>param:</h3>
+ </a><ul><a>
+ </a><li><a><span class=parameter>theme</span>
+ <span class=types></span></a><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a>
+ Beautiful theme table
+ </li>
+ <li><span class=parameter>color</span>
+ <span class=types><span class=type>color</span></span>
+ Icons' color.
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=theme_assets.recolor_layout></a>
+ <strong>theme_assets.recolor_layout (theme, color)</strong>
+ </dt>
+ <dd>
+ Recolor layout icons.
+ <ul>
+ <li><span class=parameter>theme</span>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a></span>
+ Beautiful theme table
+ </li>
+ <li><span class=parameter>color</span>
+ <span class=types><span class=type>color</span></span>
+ Icons' color.
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a></span>
+ Beautiful theme table with the images recolored.
+ </ol>
+</dd>
+</dl>
+ <h2 class=section-header><a name=lib_beautiful_xresources_Functions></a>lib.beautiful.xresources Functions</h2>
+ <dl class=function>
+ <dt>
+ <a name=xresources.get_current_theme></a>
+ <strong>xresources.get_current_theme ()</strong>
+ </dt>
+ <dd>
+ Get current base colorscheme from xrdb.
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><a class=type href=https://www.lua.org/manual/5.1/manual.html#5.5>table</a></span>
+ Color table with keys ‘background’, ‘foreground’ and ‘color0’..‘color15’
+ </ol>
+</dd>
+ <dt>
+ <a name=xresources.get_dpi></a>
+ <strong>xresources.get_dpi <i class=deprecated_label>[deprecated]</i><a></a></strong><a>
+ </a></dt><a>
+ </a><dd><a>
+ Get global or per-screen DPI value falling back to xrdb.<p></p>
+<p> This function is deprecated. Use <code>s.dpi</code> and avoid getting the DPI without
+ a screen.
+ <h3>param:</h3>
+ </a><ul><a>
+ </a><li><a><span class=parameter>s</span>
+ <span class=types><span class=type>integer</span> or </span></a><a class=type href=https://awesomewm.org/doc/api/classes/screen.html#>screen</a>
+ The screen.
+ (<em>optional</em>)
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=xresources.set_dpi></a>
+ <strong>xresources.set_dpi (dpi[, s])</strong>
+ </dt>
+ <dd>
+ Set DPI for a given screen (defaults to global).
+ <ul>
+ <li><span class=parameter>dpi</span>
+ <span class=types><span class=type>number</span></span>
+ DPI value.
+ </li>
+ <li><span class=parameter>s</span>
+ <span class=types><span class=type>integer</span></span>
+ Screen.
+ (<em>optional</em>)
+ </li>
+ </ul>
+</dd>
+ <dt>
+ <a name=xresources.apply_dpi></a>
+ <strong>xresources.apply_dpi (size[, s])</strong>
+ </dt>
+ <dd>
+ Compute resulting size applying current DPI value (optionally per screen).
+ <ul>
+ <li><span class=parameter>size</span>
+ <span class=types><span class=type>number</span></span>
+ Size
+ </li>
+ <li><span class=parameter>s</span>
+ <span class=types><span class=type>integer</span> or <a class=type href=https://awesomewm.org/doc/api/classes/screen.html#>screen</a></span>
+ The screen.
+ (<em>optional</em>)
+ </li>
+ </ul>
+ <h3>Returns:</h3>
+ <ol>
+ <span class=types><span class=type>integer</span></span>
+ Resulting size (rounded to integer).
+ </ol>
+</dd>
+</dl>
+</div> 
+</div> 
+<div id=about>
+<i>generated by <a href=https://github.com/stevedonovan/LDoc>LDoc 1.4.6</a></i>
+<i style=float:right>Last updated 2021-08-27 18:56:05 </i>
+</div> 
+</div> 

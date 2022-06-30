@@ -1,0 +1,67 @@
+.main {
+  background-color: #282a36;
+}
+
+.titleOfNewsArticle {
+  color: #f8f8f2;
+  text-align: center;
+  font-size: 14px;
+  font: bold;
+}
+
+body{
+  font-family: 'Courier New', 'monospace';
+  color: #f8f8f2;
+}
+
+ /* unvisited link */
+a:link {
+  color: #6272a4;
+}
+
+/* visited link */
+a:visited {
+  color: #bd93f9;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ff79c6;
+}
+
+/* selected link */
+a:active {
+  color: #6272a4;
+}
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 70px;
+  margin-right: 60px;
+  border-style: inset;
+  border-width: 0.7px;
+  color: #f8f8f2;
+  
+}
+
+.sectionHeader {
+  text-align: center;
+  color: #f8f8f2;
+
+}
+
+h4 {
+  margin-left: 60px;
+}
+
+.tutorialP {
+  margin-left: 20px;
+  margin-right: 80px;
+  text-justify: center;
+}
+
+.helpLink{
+  text-align: right;
+}
