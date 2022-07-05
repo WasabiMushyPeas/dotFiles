@@ -1,9 +1,6 @@
 ~/.starship/
-~/.vim/
-~/.bash_history
+~/vim/
 ~/.task/
-~/.bashrc
-~/.python_history
 ~/.vscode-oss/
 ~/Documents/
 ~/Desktop/
@@ -21,3 +18,4 @@
 ~/.config/pulse/
 ~/.config/.starship/
 ~/.config/starship.toml
+~/.config/rofi/
